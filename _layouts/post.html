@@ -18,8 +18,11 @@ post_class: post-template
             <!-- Post Featured Image -->
 			{% if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
 			<!-- End Featured Image -->
-			<div class="mainheading">             
-                
+			<div class="mainheading">  
+                           
+                 <!-- Post Title -->
+				<h1 class="posttitle">{{ page.title }}</h1> 
+               
                 <!-- Post Categories -->
                 <div class="after-post-tags">
                     <ul class="tags">
@@ -33,8 +36,6 @@ post_class: post-template
                 </div>
                 <!-- End Categories -->
                 
-                <!-- Post Title -->
-				<h1 class="posttitle">{{ page.title }}</h1> 
                 
 			</div>
 
