@@ -1,4 +1,3 @@
-
 ---
 layout: default
 disqus: false
@@ -8,16 +7,16 @@ post_class: post-template
 
 <div class="entry-header">
     <!-- Post Title -->
-    <h1 class="posttitle">{{ page.title }}</h1>
-    <!-- Date  Box -->
-    <div class="d-flex align-items-center mt-4">
-        <div>
-        <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-        {% if page.last_modified_at %}
-        (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-        {% endif %}
-        </div>            
-    </div>
+    <h1 class="posttitle">{{ page.title }}</h1> 
+    <!-- Post Date -->
+    <p>
+        <small>
+            <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+            {% if page.last_modified_at %}
+            (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+            {% endif %}
+            </small>
+        </p>
 </div>
 
 
@@ -25,12 +24,7 @@ post_class: post-template
 {% include featured-image.html %}
 
 <!-- Content -->
-<div class="article-post serif-font">
-    {{content}}
-  </div>
-
-<!-- Related Post -->
-{% include pagination.html %}
+{% include article.html %}
 
 
 
