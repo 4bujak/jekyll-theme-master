@@ -12,10 +12,11 @@ post_class: post-template
 		
 
 		<!-- Post -->                
-		<div class="col-sm-8">
+		<div class="col-sm-16">
             <!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
-			<!-- End Featured Image -->
+			{% if page.image %}<div class="col-12"><img class="img-fluid rounded-3 mb-5" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
+
+            <!-- End Featured Image -->
 			<div class="mainheading">             
                 
                 <!-- Post Categories -->
