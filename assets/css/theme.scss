@@ -613,3 +613,10 @@ span.navigation:before {
     transition: all.3s;
     opacity:.8;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+    margin-left: 5px;
+    justify-content: center;
+}
